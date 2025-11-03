@@ -54,6 +54,9 @@
             <label for="jenis_produk" class="form-label">Jenis Produk</label>
             <select id="jenis_produk" class="form-control">
                 <option selected value="">Pilih Produk</option>
+                @foreach ($products_type as $product_type)
+                    <option value="">{{ $product_type['jenis'] }}</option>
+                @endforeach
             </select>
         </div>
         <div class="col-1 col-md-6 mb-1">
