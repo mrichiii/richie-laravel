@@ -36,7 +36,9 @@ Route::get('/produk', function () {
     return view('produk', compact('page_title', 'products'));
 });
 
-
+Route::get('/tambah', function () {
+    return view('tambah');
+});
 // Route::get('/mahasiswa', function () {
 //     return view('mahasiswa');
 // });

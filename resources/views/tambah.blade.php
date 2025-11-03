@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Produk</title>
+    <title>Tambab Produk</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
+    
     <nav class="navbar bg-body-tertiary fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">UTS Laravel</a>
@@ -38,44 +39,32 @@
     </div>
     </nav>
     <div class="container" style="margin-top: 80px;">
-        <div class="d-flex justify-content-between align-items-center">
-            <h2>Halaman Produk</h2>
-            <a href="/tambah" class="btn btn-primary">
-                Tambah Produk
-            </a>
-        </div>
-    </div>
-    <br>
-    <div class="container">
-        <div class="row">
-                <table class="table table-striped table-primary">
-                    <thead>
-                        <tr>
-                            <th>Kode Produk</th>
-                            <th>Nama Produk</th>
-                            <th>Jenis Produk</th>
-                            <th>Harga</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($products as $product)
-                        <tr>
-                            <td>{{ $product['kode_produk'] }}</td>
-                            <td>{{ $product['nama_produk'] }}</td>
-                            <td>{{ $product['jenis_produk'] }}</td>
-                            <td>{{ $product['harga_produk'] }}</td>
-                        </tr>
-                        @endforeach
-                    </tbody>
+    <h2>Form Tambah Produk</h2>
 
-                </table>
+    <form action="" class="row my-3">
+        <div class="col-1 col-md-4 mb-1">
+            <label for="kode_produk" class="form-label">Kode Produk</label>
+            <input type="text" id="kode_produk" class="form-control" placeholder="Input Kode Produk">
         </div>
-    </div>
-
+        <div class="col-1 col-md-4 mb-1">
+            <label for="nama_produk" class="form-label">Nama Produk</label>
+            <input type="text" id="nama_produk" class="form-control" placeholder="Input Nama Produk">
+        </div>
+        <div class="col-1 col-md-4 mb-1">
+            <label for="jenis_produk" class="form-label">Jenis Produk</label>
+            <select id="jenis_produk" class="form-control">
+                <option selected value="">Pilih Produk</option>
+            </select>
+        </div>
+        <div class="col-1 col-md-6 mb-1">
+            <label for="harga_produk" class="form-label">Harga</label>
+            <input type="text" id="harga_produk" class="form-control" placeholder="Input Harga">
+        </div>
+        <div class="col-1 col-md-6 mb-1 d-flex align-items-end">
+            <button class="btn btn-success" style="width: 100%;">Simpan</button>
+        </div>
+    </form>
+</div>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
-</html>
 </body>
 </html>
